@@ -1,0 +1,56 @@
+#!/bin/sh
+
+WORKING_DIR=`pwd`
+
+read -p "Installing on $WORKING_DIR Are you sure? (y/n)" -n 1 -r
+echo    # move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+# run these commands after confirmation
+
+# initialize all files needed for new project
+touch index.html 
+
+echo "node_modules" >> .gitignore
+
+echo "var gulp = require('gulp'); 
+var jshint = require('gulp-jshint'); 
+var watch = require('gulp-watch'); 
+
+gulp.task('default', ['lint', 'watch']); 
+
+gulp.task('watch', function() { 
+	gulp.watch('./js/**/*.js', ['lint']); 
+}); 
+
+gulp.task('lint', function() { 
+	return gulp.src('./js/**/*.js') 
+	.pipe(jshint()) 
+	.pipe(jshint.reporter('jshint-stylish')); 
+});" >> gulpfile.js
+
+echo "{
+  "predef": [ "document", "jQuery", "\$", "console", "window" ],
+  "esversion": 6,
+  "globalstrict": true,
+  "browserify": true
+}" >> .jshintrc
+
+echo "#Initialize repo" >> README.md
+
+mkdir css && cd $_
+touch main.css
+cd ../
+mkdir js && cd $_
+touch main.js
+cd ../
+
+npm init
+npm install --save-dev gulp jshint jshint-stylish gulp-watch gulp-jshint
+
+git init
+git add --all
+git commit -m "initial commit"
+
+fi
+
