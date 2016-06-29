@@ -3,7 +3,7 @@
 
 ### A simple bash script for setting up new projects quickly and easily
 
-This script does a few things:
+This script does a few things
 1. Checks working directory to make sure it is actually where you want to install
 1. Creates index.html .gitignore .jshintrc gulpfile.js files in the main directory
 1. Creates two sub-directories, css & js, and creates an initial file in each directory
