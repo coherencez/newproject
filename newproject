@@ -36,7 +36,7 @@ echo "{
   "browserify": true
 }" >> .jshintrc
 
-echo "#Initialize repo" >> README.md
+echo "# Initialize repo" >> README.md
 
 mkdir css && cd $_
 touch main.css

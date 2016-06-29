@@ -3,7 +3,7 @@
 
 ### A simple bash script for setting up new projects quickly and easily
 
-This script does a few things:
+#### This script does a few things:
 
 1. Checks working directory to make sure it is actually where you want to install
 1. Creates index.html .gitignore .jshintrc gulpfile.js files in the main directory
@@ -15,23 +15,23 @@ This script does a few things:
 1. Makes an initial commit on master
 
 
-#### The rest is up to you!
+### The rest is up to you!
 
-To run (two methods):
+#### To run (two methods):
 
-First method (the obnoxious way):
+##### First method (the obnoxious way):
 
 1. Simply download the newproject.sh file
 1. Create a new empty directory and cd into it
 1. Copy newproject.sh into new directory
-1. run command `sh newproject.sh`
+1. run command `sh newproject`
 
-Better way: 
+##### Better way: 
 
 1. Download newproject
 1. Copy the file into your usr/local/bin folder
 ```note: You will need root privileges for this. Also this is the usr folder at the root of your computer. NOT the User/ folder. Easiest access is to open terminal, run `cd`, `cd ..`, `cd ..`, `ls -ahl`. You will see the usr/ folder there```
-1. Once you have the file copied over, run the command `chmod +rx newproject` or `chmod +rx newproject.sh`
-1. Now whenever you want to start a new project, just create your empty directory, cd into it and run `newproject`
+1. Once you have the file copied over, in your terminal run the command `chmod +rx newproject`
+1. Now whenever you want to start a new project, just create your empty directory, cd into it and run command `newproject`
 
 Voila! You have a brand new project ready to go!
