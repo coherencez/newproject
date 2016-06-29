@@ -9,7 +9,7 @@ then
 # run these commands after confirmation
 
 # initialize all files needed for new project
-touch index.html 
+touch index.html
 
 echo "node_modules" >> .gitignore
 
@@ -30,10 +30,10 @@ gulp.task('lint', function() {
 });" >> gulpfile.js
 
 echo "{
-  "predef": [ "document", "jQuery", "\$", "console", "window" ],
-  "esversion": 6,
-  "globalstrict": true,
-  "browserify": true
+  \"predef\": [ \"document\", \"jQuery\", \"\$\", \"console\", \"window\" ],
+  \"esversion\": 6,
+  \"globalstrict\": true,
+  \"browserify\": true
 }" >> .jshintrc
 
 echo "# Initialize repo" >> README.md
