@@ -34,4 +34,5 @@
 4. Now whenever you want to start a new project, just create your empty directory, cd into it and run command `newproject`
 
 ```note: You will need root privileges for this. Also this is the usr folder at the root of your computer. NOT the User/ folder. Easiest access is to open terminal, run `cd`, `cd ..`, `cd ..`, `ls -ahl`. You will see the usr/ folder there```
+
 Voila! You have a brand new project ready to go!
