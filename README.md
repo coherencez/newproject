@@ -29,10 +29,11 @@
 ##### Better way: 
 
 1. Download newproject
-2. Copy the file into your usr/local/bin folder
-3. Once you have the file copied over, in your terminal run the command `chmod +rx newproject`
-4. Now whenever you want to start a new project, just create your empty directory, cd into it and run command `newproject`
+2. cd into your download dir
+3. run `cp newproject /usr/local/bin`
+4. Once you have the file copied over, in your terminal (from anywhere) run `chmod +rx newproject`
+5. Now whenever you want to start a new project, just create your empty directory, cd into it and run command `newproject`
 
-```note: You will need root privileges for this. Also this is the usr folder at the root of your computer. NOT the User/ folder. Easiest access is to open terminal, run `cd`, `cd ..`, `cd ..`, `ls -ahl`. You will see the usr/ folder there```
+```note: You will need root privileges for this. Also this is the usr folder at the root of your computer. NOT the User/ folder.```
 
 Voila! You have a brand new project ready to go!
