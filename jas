@@ -61,5 +61,5 @@ fi
 if [[ $REPLY =~ ^[Nn]$ ]]
 	then 
 	echo
-	echo "You selected 'NO'. If you did not intend to, just run 'newproject' again."
+	echo "You selected 'NO'. If you did not intend to, just run 'jas' again."
 fi
