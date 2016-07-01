@@ -1,0 +1,65 @@
+#!/bin/sh
+
+WORKING_DIR=`pwd`
+
+read -p "Installing on $WORKING_DIR Are you sure? (y/n)" -n 1 -r
+echo    # move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+	# run these commands after confirmation
+
+	# initialize all files needed for new project
+	echo 
+	echo "Running Jasmine..."
+	# install jasmine
+	wget https://github.com/jasmine/jasmine/releases/download/v2.4.1/jasmine-standalone-2.4.1.zip
+	unzip jasmine-standalone-2.4.1.zip
+	# remove unecessary files/folders
+	rm -rf src spec jasmine-standalone-2.4.1.zip MIT.LICENSE
+	rm SpecRunner.html
+
+	echo "node_modules
+SpecRunner.html 
+// **/*pec.js
+lib/" >> .gitignore
+
+	echo "<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=\"utf-8\">
+  <title>Jasmine Spec Runner v2.4.1</title>
+
+  <link rel=\"shortcut icon\" type=\"image/png\" href=\"lib/jasmine-2.4.1/jasmine_favicon.png\">
+  <link rel=\"stylesheet\" href=\"lib/jasmine-2.4.1/jasmine.css\">
+
+  <script src=\"lib/jasmine-2.4.1/jasmine.js\"></script>
+  <script src=\"lib/jasmine-2.4.1/jasmine-html.js\"></script>
+  <script src=\"lib/jasmine-2.4.1/boot.js\"></script>
+
+  <!-- include source files here... -->
+  <script src=\"js/main.js\"></script>
+
+  <!-- include spec files here... -->
+  <script src=\"js/testSpec.js\"></script>
+
+</head>
+
+<body>
+</body>
+</html>" >> SpecRunner.html
+
+	echo "describe('foo', function () {
+	it('should have a bar function', function () {
+		expect(bar).toBeDefined();
+	});
+});" >> js/testSpec.js
+
+fi
+
+
+
+if [[ $REPLY =~ ^[Nn]$ ]]
+	then 
+	echo
+	echo "You selected 'NO'. If you did not intend to, just run 'newproject' again."
+fi

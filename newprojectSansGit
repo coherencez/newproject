@@ -61,12 +61,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 	echo "Running NPM init..."
 	npm init
 	npm install --save-dev gulp jshint jshint-stylish gulp-watch gulp-jshint
-
-	echo
-	echo "Running git init..."
-	git init
-	git add --all
-	git commit -m "initial commit"
 fi
 
 
