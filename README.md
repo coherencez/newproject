@@ -56,6 +56,7 @@ does everything `newproject` does except without git. A couple of you mentioned 
 ### newprojectJas / jas
 
 ```note: wget is required for all jasmine enabled bash scripts```
+
 the exciting stuff. `newprojectJas` takes the base `newproject`, and supercharges it with a Jasmine install. `jas` will initiate Jasmine in an existing project.
 
 1. uses wget to retreive Jasmine
