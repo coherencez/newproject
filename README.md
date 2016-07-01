@@ -65,7 +65,7 @@ the exciting stuff. `newprojectJas` takes the base `newproject`, and supercharge
 4. creates spec file in js dir called testSpec.js
 5. sets up SpecRunner.html with appropriate file paths to testSpec.js and main.js
 6. populates testSpec.js with a mock test boilerplate
-7. adds new lines to .gitignore in order to ignore SpecRunner.js and lib/ as well as adds an optional line (just remove the //) to ignore all spec files.
+7. adds new lines to .gitignore in order to ignore SpecRunner.html and the Jasmine lib/ as well as adds an optional line (just remove the //) to ignore all spec files.
 
 
 #### * These all install and run the exact same way as `newproject`. Just follow the instrcutions above (but change the file names of course). The file name becomes the command to run * 
